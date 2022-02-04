@@ -1,0 +1,32 @@
+<%- include('../partials/_header.ejs') %>
+
+    <h1>Créer un compte</h1>
+
+    <form action="/auth/register" method="post" class="w-75 mx-auto my-5">
+        <div class="mb-3">
+            <label for="firstName" class="from-label">Prénom :</label>
+            <input type="text" name="firstName" id="firstName" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="lastName" class="from-label">Nom :</label>
+            <input type="text" name="lastName" id="lastName" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="from-label">Email :</label>
+            <input type="email" name="email" id="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="from-label">Mot de passe</label>
+            <input type="password" name="password" id="password" class="form-control" required>
+        </div>
+        <div class="mb-3">
+            <label for="passwordConfirm" class="from-label">Confirmer le mot de passe</label>
+            <input type="password" name="passwordConfirm" id="passwordConfirm" class="form-control" required>
+        </div>
+        <div>
+            <button type="submit" class="btn btn-success">Valider</button>
+            <button type="reset" class="btn btn-danger">Effacer</button>
+        </div>
+    </form>
+
+    <%- include('../partials/_footer.ejs') %>
